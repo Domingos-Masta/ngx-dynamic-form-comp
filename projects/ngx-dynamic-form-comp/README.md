@@ -5,7 +5,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## USE
 
-      new DropdownQuestion({
+      new Dropdown({
         key: 'brave',
         label: 'Bravery Rating',
         options: [
@@ -17,7 +17,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
         order: 3
       }),
 
-      new TextboxQuestion({
+      new Textbox({
         key: 'firstName',
         label: 'First name',
         value: 'Bombasto',
@@ -25,7 +25,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
         order: 1
       }),
 
-      new TextboxQuestion({
+      new Textbox({
         key: 'emailAddress',
         label: 'Email',
         type: 'email',
