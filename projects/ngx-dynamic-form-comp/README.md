@@ -3,6 +3,35 @@
 This is a library to help build reactive forms as in angular
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.9.
 
+## USE
+
+      new DropdownQuestion({
+        key: 'brave',
+        label: 'Bravery Rating',
+        options: [
+          {key: 'solid',  value: 'Solid'},
+          {key: 'great',  value: 'Great'},
+          {key: 'good',   value: 'Good'},
+          {key: 'unproven', value: 'Unproven'}
+        ],
+        order: 3
+      }),
+
+      new TextboxQuestion({
+        key: 'firstName',
+        label: 'First name',
+        value: 'Bombasto',
+        required: true,
+        order: 1
+      }),
+
+      new TextboxQuestion({
+        key: 'emailAddress',
+        label: 'Email',
+        type: 'email',
+        order: 2
+      })
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project ngx-dynamic-form-comp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-dynamic-form-comp`.
