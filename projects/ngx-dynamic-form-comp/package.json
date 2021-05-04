@@ -1,6 +1,12 @@
 {
     "name": "ngx-dynamic-form-comp",
-    "version": "0.1.2",
+    "version": "0.1.3",
+    "description": "A packaged ngx-dynamic-form-comp components for building forms dynamicaly and easy way",
+    "license": "MIT",
+    "author": "Domingos M. Fernando <domingos.m.fernando@gmail.com>",
+    "homepage": "https://github.com/Domingos-Masta/ngx-dynamic-form-comp/tree/master/projects/ngx-dynamic-form-comp",
+    "url": "https://github.com/Domingos-Masta/ngx-dynamic-form-comp/issues",
+    "email": "domingos.m.fernando@gmail.com",
     "peerDependencies": {
         "@angular/common": "^11.0.9",
         "@angular/core": "^11.0.9"

@@ -25,6 +25,7 @@ export class DynamicFormComponent implements OnInit{
     @Input() fieldClass: string = '';
     @Input() inputClass: string = '';
     form: FormGroup = new FormGroup({});
+    @Input() onSubmmitForm = (form: FormGroup):void => {};
     payLoad = '';
   
     constructor(private qcs: FieldControlService) {  }
@@ -34,7 +35,8 @@ export class DynamicFormComponent implements OnInit{
     }
   
     onSubmit() {
-      this.payLoad = JSON.stringify(this.form.getRawValue());
+      // this.payLoad = JSON.stringify(this.form.getRawValue());
+      this.onSubmmitForm(this.form);
     }
 
 }
