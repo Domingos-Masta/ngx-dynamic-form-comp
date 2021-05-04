@@ -1,6 +1,6 @@
 # NgxDynamicFormComp
 
-This is a library to help build reactive forms as in angular
+This is a library help build reactive forms dynamicaly in angular.
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.9.
 
 ## USE
@@ -73,3 +73,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 ## License
 
 LGPL
+
+## By
+
+Domingos M. Fernando
