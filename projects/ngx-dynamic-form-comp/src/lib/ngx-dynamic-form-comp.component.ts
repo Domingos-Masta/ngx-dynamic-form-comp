@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FieldBase } from './field-base';
 import { FieldService } from './field.service';
+import { CustomOptions } from './custom-options';
 
 @Component({
   selector: 'ngx-dynamic-form-comp',
   template: `<div>
-            <app-dynamic-form [fields]="fields$ | async" [submmitLabel]="submmitLabel" [buttonClass]="buttonClass" [fieldClass]="fieldClass" [inputClass]="inputClass"></app-dynamic-form>
+            <app-dynamic-form [fields]="fields$ | async" [submmitLabel]="customOptions.submmitLabel" [buttonClass]="customOptions.buttonClass" [fieldClass]="customOptions.fieldClass" [inputClass]="customOptions.inputClass"></app-dynamic-form>
           </div>`,
   providers:  [FieldService]
 })
@@ -14,10 +15,7 @@ export class NgxDynamicFormCompComponent implements OnInit {
 
   fields$: Observable<FieldBase<any>[]>;
   @Input() fieldsList: any[] = [];
-  @Input() submmitLabel: string = 'Submmit';
-  @Input() buttonClass: string = '';
-  @Input() fieldClass: string = '';
-  @Input() inputClass: string = '';
+  @Input() customOptions: CustomOptions = new CustomOptions();
 
   constructor(private service: FieldService) {
     this.fields$ = service.getFields(this.fieldsList);
