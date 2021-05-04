@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-dynamic-form-comp": {
+      "projectType": "library",
+      "root": "projects/ngx-dynamic-form-comp",
+      "sourceRoot": "projects/ngx-dynamic-form-comp/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-dynamic-form-comp/tsconfig.lib.json",
+            "project": "projects/ngx-dynamic-form-comp/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-dynamic-form-comp/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-dynamic-form-comp/src/test.ts",
+            "tsConfig": "projects/ngx-dynamic-form-comp/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-dynamic-form-comp/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-dynamic-form-comp/tsconfig.lib.json",
+              "projects/ngx-dynamic-form-comp/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-dynamic-form-comp"
+}
