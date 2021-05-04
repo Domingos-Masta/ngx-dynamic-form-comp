@@ -55,7 +55,17 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 #### Calling in a component
 
-    `<ngx-dynamic-form-comp [fieldsList]="fieldList" [submmitLabel]="'Enviar'"></ngx-dynamic-form-comp>`
+  In html Compontent.
+
+    `<ngx-dynamic-form-comp [fieldsList]="localFiledList" [customOptions]="options" [onSubmmitForm]="onSubmmit"></ngx-dynamic-form-comp>`
+
+  On Ts Component 
+
+    `onSubmmit = (form: FormGroup) => {`
+      `console.log('Form Enviado para fora', form);`
+    `}`
+
+    this method with capture the form after click event on submmit button.
 
 #### Extra options
 
