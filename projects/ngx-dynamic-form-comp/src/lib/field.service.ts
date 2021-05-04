@@ -10,10 +10,10 @@ export class FieldService {
   // TODO: get from a remote source of question metadata
   getFields(_fieldList: any[]) {
 
-    let fields: FieldBase<string>[] = [];
+    const fields: FieldBase<string>[] = [];
     _fieldList.forEach(element => {
-        switch (element.kindof) {
-            case 'dopdown':
+        switch (element.controlType) {
+            case 'dropdown':
                 fields.push(new Dropdown(element));
                 break;
             case 'textbox':

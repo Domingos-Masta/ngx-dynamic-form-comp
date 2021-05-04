@@ -6,11 +6,9 @@ export class FieldBase<T> {
     order: number;
     controlType: string;
     type: string;
-    kindof: string;
     options: {key: string, value: string}[];
   
     constructor(options: {
-        kindof?: string;
         value?: T;
         key?: string;
         label?: string;
@@ -28,7 +26,6 @@ export class FieldBase<T> {
       this.controlType = options.controlType || '';
       this.type = options.type || '';
       this.options = options.options || [];
-      this.kindof = options.kindof || '';
     }
   }
   

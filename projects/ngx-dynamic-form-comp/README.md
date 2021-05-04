@@ -5,7 +5,41 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## USE
 
-      new Dropdown({
+  Install `npm i ngx-dynamic-form-comp`
+
+  Import `NgxDynamicFormCompModule` In module required.
+
+  `import { NgxDynamicFormCompModule } from 'ngx-dynamic-form-comp';
+
+  @NgModule({
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      ...
+      NgxDynamicFormCompModule
+      ....
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }`
+
+
+## USE
+
+
+  fieldList = [
+      {
+        controlType:'textbox',
+        key: 'firstName',
+        label: 'First name',
+        value: 'Bombasto',
+        required: true,
+        order: 1
+      },
+      {
+        controlType:'dropdown',
         key: 'brave',
         label: 'Bravery Rating',
         options: [
@@ -15,40 +49,27 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
           {key: 'unproven', value: 'Unproven'}
         ],
         order: 3
-      }),
+      }];
 
-      new Textbox({
-        key: 'firstName',
-        label: 'First name',
-        value: 'Bombasto',
-        required: true,
-        order: 1
-      }),
+  submmitLabel:string = 'Submmit';
 
-      new Textbox({
-        key: 'emailAddress',
-        label: 'Email',
-        type: 'email',
-        order: 2
-      })
+### Calling in a component
 
-## Code scaffolding
+    `<ngx-dynamic-form-comp [fieldsList]="fieldList" [submmitLabel]="'Enviar'"></ngx-dynamic-form-comp>`
 
-Run `ng generate component component-name --project ngx-dynamic-form-comp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-dynamic-form-comp`.
-> Note: Don't forget to add `--project ngx-dynamic-form-comp` or else it will be added to the default project in your `angular.json` file. 
+### Extra options
 
-## Build
+    `<ngx-dynamic-form-comp [fieldsList]="localFiledList" [submmitLabel]="'Enviar'" [buttonClass]="'btn btn-primary'" [fieldClass]="'form-group'" [inputClass]="'form-control'"></ngx-dynamic-form-comp>`
 
-Run `ng build ngx-dynamic-form-comp` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ngx-dynamic-form-comp`, go to the dist folder `cd dist/ngx-dynamic-form-comp` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-dynamic-form-comp` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    `fieldsList:` List of field in form
+    `submmitLabel:` Label on subbmit button
+    `buttonClass:` Css class form submmit button
+    `fieldClass:` Css class for field group
+    `inputClass:` Css class for input element
 
 ## Further help
+  To get more help...
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+
+LGPL

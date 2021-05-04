@@ -8,10 +8,10 @@ import { FormGroup } from '@angular/forms';
     template: `
         <form (ngSubmit)="onSubmit()" [formGroup]="form">
             <div *ngFor="let field of fields" class="form-row">
-                <app-dynamic-field [field]="field" [form]="form"></app-dynamic-field>
+                <app-dynamic-field [field]="field" [form]="form" [fieldClass]="fieldClass"  [inputClass]="inputClass"></app-dynamic-field>
             </div>
             <div class="form-row">
-                <button type="submit" [disabled]="!form.valid">{{submmitLabel}}</button>
+                <button type="submit" [class]="buttonClass" [disabled]="!form.valid">{{submmitLabel}}</button>
             </div>
         </form>
         `,
@@ -21,12 +21,15 @@ export class DynamicFormComponent implements OnInit{
 
     @Input() fields: FieldBase<string>[] | null = [];
     @Input() submmitLabel: string = 'Submmit';
+    @Input() buttonClass: string = '';
+    @Input() fieldClass: string = '';
+    @Input() inputClass: string = '';
     form: FormGroup = new FormGroup({});
     payLoad = '';
   
     constructor(private qcs: FieldControlService) {  }
   
-    ngOnInit() {
+    ngOnInit() {      
       this.form = this.qcs.toFormGroup(this.fields);
     }
   

@@ -8,10 +8,10 @@ import { FieldBase } from "./field-base";
         <div [formGroup]="form">
             <label [attr.for]="field.key">{{field.label}}</label>
 
-            <div [ngSwitch]="field.controlType">
+            <div [ngSwitch]="field.controlType" [class]="fieldClass">
 
                 <input *ngSwitchCase="'textbox'" [formControlName]="field.key"
-                        [id]="field.key" [type]="field.type">
+                        [id]="field.key" [type]="field.type" [class]="inputClass">
 
                 <select [id]="field.key" *ngSwitchCase="'dropdown'" [formControlName]="field.key">
                 <option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</option>
@@ -26,6 +26,8 @@ import { FieldBase } from "./field-base";
 export class DynamicFormFieldComponent {
     @Input() field: FieldBase<string> = new FieldBase();
     @Input() form: FormGroup = new FormGroup({});
+    @Input() fieldClass: string = '';
+    @Input() inputClass: string = '';
     get isValid() { return this.form.controls[this.field.key].valid; }
 }
 
