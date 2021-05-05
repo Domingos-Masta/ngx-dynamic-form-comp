@@ -7,6 +7,7 @@ export class FieldBase<T> {
     controlType: string;
     type: string;
     options: {key: string, value: string}[];
+    multiple: boolean;
   
     constructor(options: {
         value?: T;
@@ -17,6 +18,7 @@ export class FieldBase<T> {
         controlType?: string;
         type?: string;
         options?: {key: string, value: string}[];
+        multiple?: boolean;
       } = {}) {
       this.value = options.value;
       this.key = options.key || '';
@@ -26,6 +28,7 @@ export class FieldBase<T> {
       this.controlType = options.controlType || '';
       this.type = options.type || '';
       this.options = options.options || [];
+      this.multiple = options.multiple || false;
     }
   }
   
