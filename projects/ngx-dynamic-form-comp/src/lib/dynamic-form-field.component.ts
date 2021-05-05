@@ -13,13 +13,13 @@ import { FieldBase } from "./field-base";
                 <input *ngSwitchCase="'textbox'" [formControlName]="field.key"
                         [id]="field.key" [type]="field.type" [class]="inputClass">
 
-                <select [id]="field.key" *ngSwitchCase="'dropdown'" [formControlName]="field.key">
+                <select [id]="field.key" *ngSwitchCase="'dropdown'" [formControlName]="field.key" [class]="inputClass">
                 <option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</option>
                 </select>
 
             </div>
 
-            <div class="errorMessage" *ngIf="!isValid">{{field.label}} is required</div>
+            <div style="color:red;"  *ngIf="!isValid">{{field.label}} is required</div>
         </div>
     `
 })

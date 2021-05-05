@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
             <div *ngFor="let field of fields" class="form-row">
                 <app-dynamic-field [field]="field" [form]="form" [fieldClass]="fieldClass"  [inputClass]="inputClass"></app-dynamic-field>
             </div>
-            <div class="form-row">
+            <div class="form-row" style="margin-top: 10px;">
                 <button type="submit" [class]="buttonClass" [disabled]="!form.valid">{{submmitLabel}}</button>
             </div>
         </form>

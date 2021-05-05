@@ -5,6 +5,8 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## USE
 
+### Importing in NgModule
+
   Install `npm i ngx-dynamic-form-comp`
 
   Import `NgxDynamicFormCompModule` In module you want to use this component.
@@ -26,7 +28,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
   `export class AppModule { }`
 
 
-## USE
+### Field List and custom options
 
 
   `fieldList = [`
@@ -51,7 +53,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
         `order: 3`
       `}];`
 
-  `submmitLabel:string = 'Submmit'`;
+  `options: CustomOptions = { submmitLabel: 'Submmit',buttonClass: 'my-css-button-class', fieldClass: 'my-form-grou-custom-class', inputClass: 'my-css-input-class'}`;
 
 #### Calling in a component
 
@@ -69,7 +71,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 #### Extra options
 
-    `<ngx-dynamic-form-comp [fieldsList]="localFiledList" [submmitLabel]="'Enviar'" [buttonClass]="'btn btn-primary'" [fieldClass]="'form-group'" [inputClass]="'form-control'"></ngx-dynamic-form-comp>`
+    `<ngx-dynamic-form-comp [fieldsList]="localFiledList" [customOptions]="options" [onSubmmitForm]="onSubmmit"></ngx-dynamic-form-comp>`
 
     `fieldsList:` List of field in form
     `submmitLabel:` Label on subbmit button
@@ -78,11 +80,11 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
     `inputClass:` Css class for input element
 
 ## Further help
-  To get more help...
+  To get more help https://github.com/Domingos-Masta/ngx-dynamic-form-comp/issues
 
 ## License
 
-LGPL
+MIT
 
 ## By
 
