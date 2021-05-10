@@ -76,7 +76,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
     `fieldsList:` List of field in form
     `submmitLabel:` Label on subbmit button
     `buttonClass:` Css class form submmit button
-    `fieldClass:` Css class for field group
+    `formGroupClass:` Css class for field group
     `inputClass:` Css class for input element
 
 ## Further help
