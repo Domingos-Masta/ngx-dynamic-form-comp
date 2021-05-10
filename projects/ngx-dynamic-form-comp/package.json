@@ -1,6 +1,6 @@
 {
     "name": "ngx-dynamic-form-comp",
-    "version": "0.1.6",
+    "version": "0.1.8",
     "description": "A packaged ngx-dynamic-form-comp components for building forms dynamicaly and easy way",
     "license": "MIT",
     "author": "Domingos M. Fernando <domingos.m.fernando@gmail.com>",

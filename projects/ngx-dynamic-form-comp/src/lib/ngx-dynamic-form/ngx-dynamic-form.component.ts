@@ -5,7 +5,7 @@ import { FieldService } from '../core';
 import { CustomOptions, FieldBase } from '../models';
 
 @Component({
-  selector: 'lib-ngx-dynamic-form',
+  selector: 'ngx-dynamic-form-comp',
   templateUrl: './ngx-dynamic-form.component.html',
   styleUrls: ['./ngx-dynamic-form.component.css'],
   providers:  [FieldService]

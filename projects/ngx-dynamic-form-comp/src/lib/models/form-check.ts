@@ -1,6 +1,6 @@
 import { FieldBase } from "./field-base";
 
 
-export class Textbox extends FieldBase<string> {
-    controlType = 'radio';
+export class Checkbox extends FieldBase<string> {
+    controlType = 'checkbox';
   }

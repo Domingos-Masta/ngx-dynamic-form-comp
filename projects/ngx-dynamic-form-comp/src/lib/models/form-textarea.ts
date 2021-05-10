@@ -1,6 +1,6 @@
 import { FieldBase } from "./field-base";
 
 
-export class Textbox extends FieldBase<string> {
+export class Textarea extends FieldBase<string> {
     controlType = 'textarea';
   }
