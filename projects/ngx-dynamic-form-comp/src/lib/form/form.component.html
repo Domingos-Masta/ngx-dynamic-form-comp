@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngFor="let field of fields" class="form-row">
+        <lib-form-field [field]="field" [form]="form" [formGroupClass]="formGroupClass" [inputClass]="inputClass"></lib-form-field>
+    </div>
+    <div class="form-row" style="margin-top: 10px;">
+        <button type="submit" [class]="buttonClass" [disabled]="!form.valid">{{submmitLabel}}</button>
+    </div>
+</form>

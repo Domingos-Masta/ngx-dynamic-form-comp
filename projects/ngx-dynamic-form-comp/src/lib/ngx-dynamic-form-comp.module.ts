@@ -1,23 +1,24 @@
-import { DynamicFormComponent } from './dynamic-form.component';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgxDynamicFormCompComponent } from './ngx-dynamic-form-comp.component';
-import { DynamicFormFieldComponent } from './dynamic-form-field.component';
 import { CommonModule } from '@angular/common';
+import { FormFieldComponent } from './form-field/form-field.component';
+import { FormComponent } from './form/form.component';
+import { NgxDynamicFormComponent } from './ngx-dynamic-form/ngx-dynamic-form.component';
 
 
 
 @NgModule({
   declarations: [
-    NgxDynamicFormCompComponent,
-    DynamicFormFieldComponent,
-    DynamicFormComponent
+    NgxDynamicFormComponent,
+    FormFieldComponent,
+    FormComponent,
+    NgxDynamicFormComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [NgxDynamicFormCompComponent]
+  exports: [NgxDynamicFormComponent]
 })
 export class NgxDynamicFormCompModule { }
